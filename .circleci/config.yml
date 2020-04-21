@@ -21,7 +21,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
-      - run: mkdir
+      - run: mkdir junit
       - run:
           command: node_modules/.bin/mocha test --reporter mocha-junit-reporter
           environment:
